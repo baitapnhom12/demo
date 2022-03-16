@@ -1,0 +1,425 @@
+*{
+    text-decoration: none;
+}
+.header{
+    height: var(--header-height);
+    background-image: linear-gradient(0,#fe6433,#f53e2d);
+}
+.header__navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.header__navbar-list{
+    list-style: none;
+    padding-left: 0;
+    margin: 4px 0 0 0;
+}
+.header__navbar-item{
+    margin: 0 8px;
+    position: relative;
+    min-height: 26px;
+}
+.header__navbar-item-qr:hover .header-qr{
+    display: block;
+}
+.header__navbar-item,
+.header__navbar-item-link{
+    display: inline-block;
+    font-size: 14px;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 10;
+}
+.header__navbar-item:hover,
+
+/* kick chuot */
+.header__navbar-item-link:hover{
+    cursor: pointer; 
+    color: skyblue;
+
+}
+.header__navbar-item--bold{
+    font-weight: 400;
+}
+.header__navbar-item--separate::after{
+    content: "";
+    display: block;
+    position: absolute;
+    border-left: 1px solid rebeccapurple;
+   
+    height: 16px;
+    right: -9px;
+    top: 1%;
+    transform: translate(-50%);
+}
+.header__navbar-icon-link{
+    color: var(--white-color);
+    text-decoration: none;
+    text-indent: 6px;
+}
+.header__navbar-icon{
+    font-size: 18px;
+}
+/* ma qr */
+.ketnoi{
+    color: var(--white-color);
+    cursor: text;
+}
+.header-qr{
+width: 168px;
+background-color:var(--white-color) ;
+position: absolute;
+left: 0;
+top: 100%;
+padding: 8px;
+border-radius: 2px;
+display: none;
+animation: fadeIn ease-in 0,2s;
+}
+.link:nth-child(1)
+{
+    margin-left: 11px;
+
+}
+.link:nth-child(2)
+{
+    margin-left: 11px;
+
+}
+.qr-img{
+    width: 100%;
+    
+}
+.qr-dowload{
+    height: 15px;
+}
+.qr-app{
+    display: flex;
+    justify-content: space-between;
+}
+ /* Cách lấy nhanh ctrl+d  */
+ /* shift+alt+mũi tên phải */
+ .header__notify{
+position: absolute;
+top: 118%;
+right: 0;
+width: 420px;
+border: 2px solid rgb(236, 226, 220);
+background-color: var(--white-color);
+cursor: default;
+animation: header__notify-animetion ease-in 0.2s;
+transform-origin: 80% top;
+display: none;
+ }
+ @keyframes header__notify-animetion{
+    from{
+        transform: scale(0)
+    }
+    to{
+        transform: scale(1)
+    }
+}
+ .header__notify::before{
+     content: "";
+     border-width:20px 27px ;
+     border-style: solid;
+     border-color: transparent transparent var(--white-color) transparent;
+     position: absolute;
+     right: 4px;
+     top: -29px;
+ }
+ .header__notify::after{
+    content: "";
+    display: contents;
+   width:90px ;
+   height: 20px;
+    right: 0;
+    top: -16px;
+}
+ .header__notify-header{
+height: 40px;
+background-color: var(--white-color);
+ }
+ .header__notify-header h3{
+     color: black;
+     margin: 0 0 0 12px;
+     font-weight: 400;
+     font-size: 14px;
+     line-height: 40px;
+
+ }
+ .header__notify-list{
+padding-left: 0;
+ }
+ .header__notify-item{
+display: flex;
+ }
+ /* ------------hien thong bao------------ */
+ .header__navbar-item-hover:hover .header__notify{
+     display: block;
+
+ }
+ .header__notify-item:hover{
+    background-color: rgba(209, 212, 20, 0.171);
+     }
+ .header__notify-item-view{
+    background-color: rgba(238, 76, 43, 0.171);
+
+ }
+ .header__notify-link{
+display: flex;
+padding: 12px;
+width: 100%;
+text-decoration: none;
+background-color: rgba(238, 76, 43, 0.171);
+
+ }
+ .header__notify-img{
+width: 48px;
+object-fit: contain;
+ }
+ .header__notify-info{
+margin-left: 12px;
+ }
+ .header__notify-name{
+display: block;
+font-size: 12px;
+font-weight: 400;
+color: var(--black-color);
+line-height: 18px;
+
+ }
+ .header__notify-desscriotion{
+     color: #756f6e;
+    display: block;
+    font-size: 12px;
+    list-style: 12px;
+    margin-top: 6px;
+ }
+ /* -----nut xem them----- */
+.header__notify-footer{
+   display: flex;
+}
+.header__notify-footer-btn{
+   
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 16px 16px;
+    margin: auto;
+    font-size: 14px;
+    font-weight: 500;
+}
+/* ----------form đang ki----------- */
+
+.auth_form{
+    width: 500px;
+    
+    background-color: var(--white-color);
+}
+.auth_form-container
+
+{
+    padding: 0 32px;
+}
+.auth_form-header{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.auth_form-heading{
+font-size: 22px;
+font-weight: 400;
+color: var(--text-color);
+}
+.auth_form-swith-btn{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primary-color);
+    cursor: pointer;
+
+}
+
+.auth_form-input{
+    margin-top: 16px;
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 13px;
+    
+}
+.auth_form-aside{
+margin-top: 18px;
+}
+.auth_form-police{
+font-size: 12px;
+line-height: 18px;
+text-align: center;
+}
+.auth_form-police-link{
+color: var( --primary-color);
+text-decoration: none;
+}
+.auth_form-control{
+margin-top: 80px;
+justify-content: flex-end;
+margin-top: 80px;
+}
+.auth_form-control-back{
+    margin-right: 8px;
+    
+}
+.auth_form-social{
+background-color: #f5f5f5;
+padding: 20px 36px;
+display: flex;
+justify-content: space-between;
+margin-top: 32px;
+}
+
+.auth_form-social-icon{
+font-size: 18px;
+}
+.auth_form-social--facbook
+.auth_form-social-icon{
+    color: var(--white-color);
+}
+.auth_form-social--facbook{
+    color:var(--white-color);
+    background-color: #6a97f1;
+}
+.auth_form-social-title{
+    margin: 0 36px;
+}
+.auth_form-social--google{
+    background-color: var(--white-color);
+
+}
+
+/* ----------form đang nhap----------- */
+
+.auth_form-help{
+    display: flex;
+    justify-content: flex-end;
+
+}
+.auth_form-help-link{
+    font-size: 16px;
+    text-decoration: none;
+    color: #939393;
+
+}
+.auth_form-help-vach{
+    display: block;
+    height: 30px;
+    border-left: 0px solid var(--border-color);
+    margin: 2px 15px 0;
+    
+}
+.auth_form-help-forget{
+color: var(--primary-color);
+}
+
+/* ------------------ logo tim kiem gio hang */
+
+.header-logo{
+width: 200px;
+}
+.header-logo-img{
+width: 150px;
+color: var(--white-color);
+}
+.header-search{
+    height: 40px;
+    flex: 1;
+    border-radius: 3px;
+background-color: var(--white-color);
+}
+.header-with-search{
+    height: var(--header-with-search-height);
+    display: flex;
+    align-items: center;
+    margin: 0 8px;
+}
+.header-cart{
+width: 150px;
+text-align: center;
+}
+.header-cart-icon{
+    font-size: 24px;
+    color: var(--white-color);
+    margin: 6px;
+}
+.header-search-wrapc{
+    flex: 1;
+}
+.header-search-input{
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    outline: none;
+    font-size: 14px;
+    border-radius: 3px;
+    padding: 0 18px;
+    color: var(--text-color);
+}
+.header-search-btn{
+    background-color: var(--primary-color);
+    width: 37px;
+    height: 48px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    margin-right: 3px;
+}
+.header-search-btn:hover{
+    background-color:#ec593c ;
+    cursor: pointer;
+}
+.header-search-btn-icon{
+   font-size: 14px;
+   color: var(--white-color);
+}
+table{
+    width: 100%;
+}
+.ip{
+    display: flex;
+    padding-bottom: 18px;
+}
+h2{
+    font-size: 18px;
+    color: #ec593c;
+}
+.imagedelay img:hover{
+    transform: scaleY(1.1);
+    transition: 0.4s;
+}
+p {
+    font-size: 13px;
+    text-align: center;
+    color: #ec593c;
+    
+}
+.submit{
+    font-size: 13px;
+  border-radius: 4px;
+  background-color: #1cc084;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.btn-submit{
+    margin: 2px auto;
+    padding-left: 60px;
+}
+.submit:hover{
+    background-color: #ec593c;
+    color: whitesmoke;
+
+}
+
+    
